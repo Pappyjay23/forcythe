@@ -5,8 +5,8 @@ import HeroCard from "./HeroCard";
 
 const HeroSection = () => {
 	return (
-		<div className='relative w-full h-[90vh]'>
-			<div className='absolute top-0 left-0 w-full h-full z-[1]'>
+		<section className='relative w-full h-[80vh] md:h-[50vh] lg:h-[90vh] mb-[3rem]'>
+			<div className='absolute top-0 left-0 w-full h-full z-[-1]'>
 				<Image
 					src={Logo}
 					alt='Forcythe logo'
@@ -20,7 +20,7 @@ const HeroSection = () => {
 			<div className='container z-[2] relative'>
 				<HeroCard />
 			</div>
-		</div>
+		</section>
 	);
 };
 
