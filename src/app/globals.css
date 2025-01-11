@@ -2,13 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-size: 16px;
-}
-
 :root {
 	---primary-background: #030516;
 	---secondary-background: #1f3449;
@@ -19,7 +12,51 @@
 	---light-grey: #e6e0e9;
 }
 
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
 body {
 	background: var(---primary-background);
 	color: #fff;
+}
+
+.text-accent {
+	color: var(---accent);
+}
+
+.text-darkGrey {
+	color: var(---dark-grey);
+}
+
+.container {
+	max-width: 1300px;
+	margin: 0 auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+@media (min-width: 1024px) {
+	.container {
+		padding-left: 2.5rem;
+		padding-right: 2.5rem;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(10px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+.fade-in {
+	animation: fadeIn 0.7s ease forwards;
 }
