@@ -58,5 +58,50 @@ body {
 }
 
 .fade-in {
-	animation: fadeIn 0.7s ease forwards;
+	animation: fadeIn 0.7s ease-out 0.3s forwards;
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(-100%);
+	}
+	100% {
+		transform: translateX(0%);
+	}
+}
+
+@keyframes marquee-reverse {
+	0% {
+		transform: translateX(0%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
+}
+
+.marquee-container {
+	--pause-on-hover: running;
+	--pause-on-click: running;
+	--width: 100%;
+	--transform: none;
+}
+
+.marquee {
+	--play: running;
+	--direction: normal;
+	--duration: 42s;
+	--delay: 0s;
+	--iteration-count: infinite;
+	--min-width: 200%;
+	animation: marquee var(--duration) linear infinite;
+}
+
+.marquee-reverse {
+	--play: running;
+	--direction: reverse;
+	--duration: 42s;
+	--delay: 0s;
+	--iteration-count: infinite;
+	--min-width: 200%;
+	animation: marquee-reverse var(--duration) linear infinite;
 }
