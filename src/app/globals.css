@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+:root {
+	---primary-background: #030516;
+	---secondary-background: #1f3449;
+	---linear-background: rgba(12, 38, 69, 0);
+	---linear-background2: rgba(7, 22, 38, 0);
+	---accent: #60a6e7;
+	---dark-grey: #aea9b1;
+	---light-grey: #e6e0e9;
+}
+
+body {
+	background: var(---primary-background);
+	color: #fff;
+}
