@@ -31,8 +31,11 @@ const Navbar = () => {
 	}, []);
 
 	return (
-		<nav className={`fixed top-0 left-0 w-full z-30 ${scrolled ? 'backdrop-blur-md' : ''}`}>
-			<div className='max-w-[1300px] mx-auto py-7 px-4 lg:px-10 flex justify-between gap-5 lg:gap-10 items-center '>
+		<nav
+			className={`fixed top-0 left-0 w-full z-30 ${
+				scrolled ? "backdrop-blur-md" : ""
+			}`}>
+			<div className='py-7 container flex justify-between gap-5 lg:gap-10 items-center '>
 				<div className='flex items-center gap-10 lg:gap-20'>
 					<Link href='/'>
 						<Image
