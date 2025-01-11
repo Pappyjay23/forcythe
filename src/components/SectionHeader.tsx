@@ -76,7 +76,7 @@ const SectionHeader = ({
 	const highlightWords = highlight ? highlight.trim().split(/\s+/).length : 0;
 
 	return (
-		<h1 ref={headerRef} className='text-center'>
+		<h1 ref={headerRef} className='text-center md:w-[85%] lg:w-[70%] mx-auto mb-5'>
 			{renderWords(beforeHighlight, 0, false, false)}
 			{renderWords(highlight, beforeWords, true, false)}
 			{renderWords(afterHighlight, beforeWords + highlightWords, false, true)}
