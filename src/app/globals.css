@@ -24,6 +24,11 @@ body {
 	color: #fff;
 }
 
+.hide-scrollbar{
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+}
+
 .text-accent {
 	color: var(---accent);
 }

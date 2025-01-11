@@ -3,7 +3,7 @@
 import HeroSection from "@/components/hero/HeroSection";
 import MarqueeSection from "@/components/marquee/MarqueeSection";
 import Navbar from "@/components/Navbar";
-import SectionHeader from "@/components/SectionHeader";
+import TestimonialSection from "@/components/testimonials/TestimonialSection";
 import React from "react";
 
 const Home = () => {
@@ -13,7 +13,7 @@ const Home = () => {
 			<main className='mt-[110px]'>
 				<HeroSection />
 				<MarqueeSection />
-				<SectionHeader text="Success in Motion - Our clients’ journey" highlight="Motion" />
+				<TestimonialSection />
 			</main>
 		</div>
 	);
