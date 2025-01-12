@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import SectionHeader from "../SectionHeader";
 
 interface Testimonial {
 	id: number;
@@ -20,7 +21,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
 		if (typeof window !== "undefined" && window.innerWidth >= 1024) {
 			return testimonial.id === 1 ? 0 : (testimonial.id / 5) * 100;
 		}
-		return 0; 
+		return 0;
 	};
 
 	return (
@@ -31,15 +32,25 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
 			}}>
 			<div className='sm:basis-[58%] pr-3'>
 				<div className='mb-4'>
-					<p className='text-base font-bold'>{testimonial.company}</p>
+					<SectionHeader
+						text={testimonial.company}
+						fontClassName='text-base font-bold'
+						noSpace
+					/>
 				</div>
 				<div className='mb-8'>
-					<p className='text-base leading-7'>{testimonial.testimonial}</p>
+					<SectionHeader
+						text={testimonial.testimonial}
+						fontClassName='text-base leading-7'
+						noSpace
+					/>
 				</div>
 				<div className='mb-4'>
-					<p className='text-[15px] font-semibold'>
-						{testimonial.name}, {testimonial.position}
-					</p>
+					<SectionHeader
+						text={`${testimonial.name}, ${testimonial.position}`}
+						fontClassName='text-[15px] font-semibold'
+						noSpace
+					/>
 				</div>
 			</div>
 			<div className='w-full h-[24rem] sm:w-auto sm:h-[24rem] sm:basis-[42%] relative object-top mt-3 sm:mt-0'>

@@ -67,7 +67,7 @@ const CallToActionSection = () => {
 			if (descriptionIndex < fullDescription.length) {
 				setDescription(fullDescription.slice(0, descriptionIndex + 1));
 				descriptionIndex++;
-				if (descriptionIndex === Math.floor(fullDescription.length / 2)) {
+				if (descriptionIndex === Math.floor(fullDescription.length / 6)) {
 					setIsFadeInTriggered(true);
 				}
 			} else {

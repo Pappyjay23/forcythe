@@ -77,7 +77,7 @@ const TestimonialSection = () => {
 				const nextIndex = (currentIndex + 1) % testimonials.length;
 				return testimonials[nextIndex];
 			});
-		}, 5000);
+		}, 12000);
 
 		return () => {
 			clearInterval(timer);
