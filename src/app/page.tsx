@@ -1,5 +1,6 @@
 "use client";
 
+import CallToActionSection from "@/components/CTA/CallToActionSection";
 import HeroSection from "@/components/hero/HeroSection";
 import MarqueeSection from "@/components/marquee/MarqueeSection";
 import Navbar from "@/components/Navbar";
@@ -14,6 +15,7 @@ const Home = () => {
 				<HeroSection />
 				<MarqueeSection />
 				<TestimonialSection />
+				<CallToActionSection />
 			</main>
 		</div>
 	);

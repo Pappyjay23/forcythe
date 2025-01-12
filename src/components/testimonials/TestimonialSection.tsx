@@ -94,6 +94,7 @@ const TestimonialSection = () => {
 				<SectionHeader
 					text='Discover the transformative stories of startups that scaled new heights with us'
 					highlight='transformative stories'
+					className='md:w-[85%] lg:w-[70%] mx-auto text-center'
 				/>
 				<TestimonialNavbar
 					testimonials={testimonials}
