@@ -1,7 +1,8 @@
 "use client";
 
-import AnimatedText from "@/components/AnimatedText";
+import BlogSection from "@/components/blog/BlogSection";
 import CallToActionSection from "@/components/cta/CallToActionSection";
+import FooterSection from "@/components/footer/FooterSection";
 import HeroSection from "@/components/hero/HeroSection";
 import MarqueeSection from "@/components/marquee/MarqueeSection";
 import Navbar from "@/components/Navbar";
@@ -19,9 +20,8 @@ const Home = () => {
 				<TestimonialSection />
 				<CallToActionSection />
 				<StatisticsSection />
-				<AnimatedText
-				text='Read our articles, news and product blog'
-			/>
+				<BlogSection />
+				<FooterSection />
 			</main>
 		</div>
 	);
