@@ -1,7 +1,7 @@
 "use client";
 
 import BlogSection from "@/components/blog/BlogSection";
-import CallToActionSection from "@/components/cta/CallToActionSection";
+import CTASection from "@/components/cta/CTASection";
 import FooterSection from "@/components/footer/FooterSection";
 import HeroSection from "@/components/hero/HeroSection";
 import MarqueeSection from "@/components/marquee/MarqueeSection";
@@ -18,7 +18,7 @@ const Home = () => {
 				<HeroSection />
 				<MarqueeSection />
 				<TestimonialSection />
-				<CallToActionSection />
+				<CTASection />
 				<StatisticsSection />
 				<BlogSection />
 				<FooterSection />

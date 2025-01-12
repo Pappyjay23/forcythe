@@ -42,7 +42,7 @@ const ctaItems = [
 	},
 ];
 
-const CallToActionSection = () => {
+const CTASection = () => {
 	const [activeItem, setActiveItem] = useState(ctaItems[0]);
 	const [subtitle, setSubtitle] = useState("");
 	const [description, setDescription] = useState("");
@@ -160,4 +160,4 @@ const CallToActionSection = () => {
 	);
 };
 
-export default CallToActionSection;
+export default CTASection;
