@@ -200,7 +200,7 @@ const StatisticsSection: React.FC = () => {
 							className='flex justify-evenly sm:justify-between items-center gap-3'>
 							{numberStatisticsData.map((stat) => (
 								<div
-									key={stat.number}
+									key={stat.description}
 									className='flex flex-col gap-3 text-left w-fit'>
 									<div className='text-[1.7rem] sm:text-[2rem] md:text-[3rem] text-accent font-medium'>
 										<AnimatedNumber number={stat.number} />
