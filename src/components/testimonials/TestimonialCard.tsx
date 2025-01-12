@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import SectionHeader from "../SectionHeader";
+import AnimatedText from "../AnimatedText";
 
 interface Testimonial {
 	id: number;
@@ -32,21 +32,21 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial }) => {
 			}}>
 			<div className='sm:basis-[58%] pr-3'>
 				<div className='mb-4'>
-					<SectionHeader
+					<AnimatedText
 						text={testimonial.company}
 						fontClassName='text-base font-bold'
 						noSpace
 					/>
 				</div>
 				<div className='mb-8'>
-					<SectionHeader
+					<AnimatedText
 						text={testimonial.testimonial}
 						fontClassName='text-base leading-7'
 						noSpace
 					/>
 				</div>
 				<div className='mb-4'>
-					<SectionHeader
+					<AnimatedText
 						text={`${testimonial.name}, ${testimonial.position}`}
 						fontClassName='text-[15px] font-semibold'
 						noSpace

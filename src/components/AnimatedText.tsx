@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 
-const SectionHeader = ({
+const AnimatedText = ({
 	text,
 	highlight,
 	className,
@@ -59,7 +59,7 @@ const SectionHeader = ({
 				<span
 					className={`inline-block opacity-0
 						${isWhite ? "text-white" : colorClassName}
-						${fontClassName ? fontClassName : 'text-[2rem] lg:text-[2.5rem] font-medium'}
+						${fontClassName ? fontClassName : "text-[2rem] lg:text-[2.5rem] font-medium"}
 						${isInView ? "fade-in" : ""}
 						${highlightWordsSet.has(word.toLowerCase()) ? "text-accent" : ""}`}
 					style={{
@@ -82,4 +82,4 @@ const SectionHeader = ({
 	);
 };
 
-export default SectionHeader;
+export default AnimatedText;
