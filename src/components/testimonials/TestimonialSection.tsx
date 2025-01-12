@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import SectionHeader from "../SectionHeader";
+import AnimatedText from "../AnimatedText";
 import TestimonialNavbar from "./TestimonialNavbar";
 import TestimonialCard from "./TestimonialCard";
 import starksLogo from "@/assets/images/starks-logo.svg";
@@ -77,7 +77,7 @@ const TestimonialSection = () => {
 				const nextIndex = (currentIndex + 1) % testimonials.length;
 				return testimonials[nextIndex];
 			});
-		}, 5000);
+		}, 12000);
 
 		return () => {
 			clearInterval(timer);
@@ -91,7 +91,7 @@ const TestimonialSection = () => {
 	return (
 		<section className='mb-[3rem]'>
 			<div className='container'>
-				<SectionHeader
+				<AnimatedText
 					text='Discover the transformative stories of startups that scaled new heights with us'
 					highlight='transformative stories'
 					className='md:w-[85%] lg:w-[70%] mx-auto text-center'

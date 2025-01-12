@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import SectionHeader from "../SectionHeader";
+import AnimatedText from "../AnimatedText";
 import Button from "../Button";
-import Image1 from '@/assets/images/camera-man.svg';
-import Image2 from '@/assets/images/plan-design.svg';
-import Image3 from '@/assets/images/plan-develop.svg';
-import Image4 from '@/assets/images/plan-launch.svg';
+import Image1 from "@/assets/images/camera-man.svg";
+import Image2 from "@/assets/images/plan-design.svg";
+import Image3 from "@/assets/images/plan-develop.svg";
+import Image4 from "@/assets/images/plan-launch.svg";
 import Image from "next/image";
 
 const ctaItems = [
@@ -19,7 +19,7 @@ const ctaItems = [
 	{
 		id: 2,
 		title: "Design",
-        subtitle: "Crafting the blueprint for success",
+		subtitle: "Crafting the blueprint for success",
 		description:
 			"Design is more than aesthetics, it’s about creating user experiences that resonate and convert. Our design experts shape your vision into a stunning reality.",
 		image: Image2,
@@ -27,7 +27,7 @@ const ctaItems = [
 	{
 		id: 3,
 		title: "Develop",
-        subtitle: "Turning blueprints into reality.",
+		subtitle: "Turning blueprints into reality.",
 		description:
 			"We breathe life into designs, building robust platforms ready to disrupt markets. Harness the experience of our development team to bring your Concept to Life.",
 		image: Image3,
@@ -35,7 +35,7 @@ const ctaItems = [
 	{
 		id: 4,
 		title: "Launch",
-        subtitle: "Your launchpad to the market.",
+		subtitle: "Your launchpad to the market.",
 		description:
 			"Launching is just the beginning, we ensure your product makes a splash and keeps making waves, ensuring a continual customer acquisition.",
 		image: Image4,
@@ -67,7 +67,7 @@ const CallToActionSection = () => {
 			if (descriptionIndex < fullDescription.length) {
 				setDescription(fullDescription.slice(0, descriptionIndex + 1));
 				descriptionIndex++;
-				if (descriptionIndex === Math.floor(fullDescription.length / 2)) {
+				if (descriptionIndex === Math.floor(fullDescription.length / 6)) {
 					setIsFadeInTriggered(true);
 				}
 			} else {
@@ -91,7 +91,7 @@ const CallToActionSection = () => {
 	return (
 		<div>
 			<div className='container pb-[3rem]'>
-				<SectionHeader
+				<AnimatedText
 					text='From Spark to Spotlight: we take you every step of the way to success.'
 					highlight='Spark Spotlight:'
 					className='md:w-[85%] lg:w-[60%] text-left'
@@ -113,14 +113,13 @@ const CallToActionSection = () => {
 									</div>
 								))}
 							</div>
-							<div className="mb-8">
+							<div className='mb-8'>
 								<p className='text-[2rem] font-medium'>{subtitle}</p>
 							</div>
 							<div
 								className={`mb-8 max-w-3xl ${
 									isFadeInTriggered ? "opacity-100" : "opacity-0"
-								} transition-opacity duration-500`}
-							>
+								} transition-opacity duration-500`}>
 								<p className='text-darkGrey mb-8 leading-7'>
 									{description.split(" ").map((word, index) => (
 										<span
@@ -130,8 +129,7 @@ const CallToActionSection = () => {
 												animationDelay: `${
 													isFadeInTriggered ? 0.4 + index * 0.05 : 0
 												}s`,
-											}}
-										>
+											}}>
 											{word}&nbsp;
 										</span>
 									))}

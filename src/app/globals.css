@@ -24,7 +24,7 @@ body {
 	color: #fff;
 }
 
-.hide-scrollbar{
+.hide-scrollbar {
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 }
@@ -109,4 +109,40 @@ body {
 	--iteration-count: infinite;
 	--min-width: 200%;
 	animation: marquee-reverse var(--duration) linear infinite;
+}
+
+.custom-animate {
+	position: relative;
+}
+
+.custom-animate::before {
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: linear-gradient(45deg, #96c8f6, #b3d0f200, #60a6e760, #b3d0f24d);
+	background-size: 400% 400%;
+	z-index: -1;
+	border-radius: inherit;
+	filter: blur(3px);
+	animation: borderAnimation 5s linear infinite;
+	transition: all 0.7s ease-in-out;
+}
+
+.custom-animate:hover::before {
+	background: linear-gradient(45deg, #60a6e7, #030516, #60a6e7, #030516);
+}
+
+@keyframes borderAnimation {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
