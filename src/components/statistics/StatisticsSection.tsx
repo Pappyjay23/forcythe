@@ -100,7 +100,7 @@ const numberStatisticsData: NumberStatistic[] = [
 ];
 
 const getBackgroundImage = (): string => {
-	if (window.innerWidth >= 1024) {
+	if (typeof window !== "undefined" && window.innerWidth >= 1024) {
 		return `url(${Arc2Img.src})`;
 	} else {
 		return `url(${ArcImg.src})`;

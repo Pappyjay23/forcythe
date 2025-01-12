@@ -16,18 +16,20 @@ const Navbar = () => {
 	};
 
 	useEffect(() => {
-		const handleScroll = () => {
-			if (window.scrollY > 50) {
-				setScrolled(true);
-			} else {
-				setScrolled(false);
-			}
-		};
+		if (typeof window !== "undefined") {
+			const handleScroll = () => {
+				if (window.scrollY > 50) {
+					setScrolled(true);
+				} else {
+					setScrolled(false);
+				}
+			};
 
-		window.addEventListener("scroll", handleScroll);
-		return () => {
-			window.removeEventListener("scroll", handleScroll);
-		};
+			window.addEventListener("scroll", handleScroll);
+			return () => {
+				window.removeEventListener("scroll", handleScroll);
+			};
+		}
 	}, []);
 
 	return (
